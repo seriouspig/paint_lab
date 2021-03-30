@@ -10,10 +10,8 @@ Paint.prototype.checkIfEmpty = function (litres) {
     }
     
 }
-Paint.prototype.emptySelf = function (litres) {
-    if (this.checkIfEmpty === false) {
-        this.litres = 0
-    }
+Paint.prototype.emptySelf = function () {
+         this.litres = 0
 }
 
 

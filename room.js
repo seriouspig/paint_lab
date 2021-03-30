@@ -6,11 +6,9 @@ const Room = function(area, painted){
 
 
 
-Room.prototype.paintRoom = function (area, paintInCan) {
-    // if paintInCan === area return this.painted = true
-    if (paintInCan === this.area) {
+Room.prototype.paintRoom = function () {
         this.painted = true;
-    }
+    
 };
 
 // A room should:

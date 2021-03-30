@@ -1,3 +1,5 @@
+const Room = require("./room");
+
 const Decorator = function (stock){
     this.stock = [];
 }
@@ -16,10 +18,20 @@ Decorator.prototype.calculatePaintinStock = function () {
 }
 
 Decorator.prototype.canPaintRoom = function (room) {
-    if (room.area <= this.calculatePaintinStock) {
-        return true
-    }
+    if (room.area <= this.calculatePaintinStock()) {
+        return true;
+    } else { return false};
+    
 }
+
+Decorator.prototype.paintTheRoom = function (room) {
+    if ( this.canPaintRoom(room) === true ) {
+        room.paintRoom();
+    }
+    
+}
+
+
 
 module.exports = Decorator;
 
